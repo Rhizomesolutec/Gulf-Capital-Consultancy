@@ -162,4 +162,49 @@
 
   <!-- Contact -->
   <section id="contact" class="section">
-    <div class="container grid-2
+    <div class="container grid-2">
+      <div class="animate slide-in-left">
+        <h2>Contact Us</h2>
+        <p>We’ll respond within one business day.</p>
+        <p><strong>Email:</strong> info@gulfcapital.example</p>
+        <p><strong>WhatsApp:</strong> +971 562919479</p>
+        <img src="contact.jpeg" alt="Contact support" class="contact-img" />
+      </div>
+      <form id="contactForm" class="card glass form-card animate slide-in-right" novalidate>
+        <label><span>Name</span><input type="text" name="name" required /></label>
+        <label><span>Email</span><input type="email" name="email" required /></label>
+        <label><span>Service</span>
+          <select name="service" required>
+            <option value="">Select</option>
+            <option>Transit Visa</option>
+            <option>Visit Visa</option>
+            <option>Work Visa</option>
+            <option>Business Setup</option>
+          </select>
+        </label>
+        <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/971562919479" class="whatsapp-float" target="_blank">WhatsApp</a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 GULF CAPITAL CONSULTANCY. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
