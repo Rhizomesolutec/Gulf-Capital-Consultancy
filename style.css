@@ -2,7 +2,7 @@
   --bg: #0a0f1f;
   --bg2: #0d1426;
   --text: #ffffff;   /* pure white for clarity */
-  --muted: #cfd6e8;  /* lighter gray for body text */
+  --muted: #e8ecf6;  /* light gray for body text */
   --primary: #2f7df4; /* Gulf blue */
   --accent: #25d366;  /* WhatsApp green */
   --gold: #f5c542;    /* Gold accent */
@@ -54,14 +54,16 @@ body {
   background-size: cover; background-position: center;
   transform: translateY(0);
   transition: transform .2s ease-out;
+  filter: saturate(1.05) contrast(1.05) brightness(.9);
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(10,15,31,0.8), rgba(10,15,31,0.95));
+  background: linear-gradient(180deg, rgba(10,15,31,0.85), rgba(10,15,31,0.95));
 }
 .hero-inner { position: relative; text-align: center; }
 .hero h1 { font-size: clamp(28px, 5vw, 48px); margin: 0; color: var(--gold); }
 .lead { color: var(--muted); max-width: 760px; margin: 12px auto 26px; }
+.cta-group { display: flex; gap: 12px; justify-content: center; }
 
 /* Sections */
 .section { padding: 70px 0; }
@@ -96,6 +98,11 @@ body {
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
   border-color: var(--primary);
 }
+
+/* FAQs */
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+details summary { cursor: pointer; padding: 14px; font-weight: 600; color: var(--gold); }
+details p { padding: 0 14px 14px; color: var(--muted); }
 
 /* Contact */
 .form-card label { display: grid; gap: 6px; margin-bottom: 12px; }
@@ -138,6 +145,7 @@ body {
 @media (max-width: 900px) {
   .grid-2 { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
   .header-cta { display: none; }
   .nav-toggle { display: inline-block; }
   .nav-list { display: none; }
@@ -147,4 +155,6 @@ body {
     border: 1px solid var(--border);
   }
 }
-@media (max-width: 560px)
+@media (max-width: 560px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
