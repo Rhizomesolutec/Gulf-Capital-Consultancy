@@ -17,7 +17,7 @@
         <span>GULF CAPITAL CONSULTANCY</span>
       </a>
       <nav class="nav" id="nav">
-        <button class="nav-toggle" id="navToggle">☰</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
         <ul class="nav-list">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -26,7 +26,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary header-cta" href="https://wa.me/971562919479" target="_blank">WhatsApp</a>
+      <a class="btn btn-primary header-cta" href="https://wa.me/971562919479" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </header>
 
@@ -41,7 +41,7 @@
       </p>
       <div class="cta-group animate fade-up delay-2">
         <a href="#services" class="btn btn-primary">Explore Services</a>
-        <a href="https://wa.me/971562919479" target="_blank" class="btn btn-outline">Chat on WhatsApp</a>
+        <a href="https://wa.me/971562919479" target="_blank" rel="noopener" class="btn btn-outline">Chat on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -52,7 +52,7 @@
       <div class="animate slide-in-left">
         <h2>About Gulf Capital Consultancy</h2>
         <p>
-          We specialize in UAE visa services and business setup — guiding you through requirements with clarity and speed.
+          We specialize in UAE visa services and business setup—guiding you through requirements with clarity and speed.
         </p>
         <ul class="ticks">
           <li>Transparent process & documentation</li>
@@ -110,6 +110,31 @@
     </div>
   </section>
 
+  <!-- FAQs -->
+  <section id="faqs" class="section">
+    <div class="container">
+      <h2 class="center">FAQs</h2>
+      <div class="faq-grid">
+        <details class="card glass animate fade-up">
+          <summary>How long does visa processing take?</summary>
+          <p>Timelines vary by visa type and documentation. We provide an estimated window after reviewing your case.</p>
+        </details>
+        <details class="card glass animate fade-up delay-1">
+          <summary>Can I extend a visit visa?</summary>
+          <p>Extensions may be possible depending on current regulations. We’ll advise based on your status and eligibility.</p>
+        </details>
+        <details class="card glass animate fade-up delay-2">
+          <summary>Do you help with business bank accounts?</summary>
+          <p>We guide documentation and introductions; final approvals depend on bank policies and compliance.</p>
+        </details>
+        <details class="card glass animate fade-up delay-3">
+          <summary>Is WhatsApp support available?</summary>
+          <p>Yes—reach us at +971 562919479 for quick questions and updates.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="container grid-2">
@@ -134,13 +159,13 @@
         </label>
         <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
         <button type="submit" class="btn btn-primary">Send</button>
-        <p id="formStatus" class="form-status"></p>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
       </form>
     </div>
   </section>
 
   <!-- Floating WhatsApp -->
-  <a href="https://wa.me/971562919479" class="whatsapp-float" target="_blank">WhatsApp</a>
+  <a href="https://wa.me/971562919479" class="whatsapp-float" target="_blank" rel="noopener">WhatsApp</a>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -149,8 +174,12 @@
       <ul class="footer-links">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#faqs">FAQs</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </footer>
 
+  <script src="script.js"></script>
+</body>
+</html>
