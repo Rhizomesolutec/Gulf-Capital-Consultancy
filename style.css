@@ -1,8 +1,8 @@
 :root {
   --bg: #0a0f1f;
   --bg2: #0d1426;
-  --text: #e8ecf6;
-  --muted: #a9b1c7;
+  --text: #ffffff;   /* pure white for clarity */
+  --muted: #cfd6e8;  /* lighter gray for body text */
   --primary: #2f7df4; /* Gulf blue */
   --accent: #25d366;  /* WhatsApp green */
   --gold: #f5c542;    /* Gold accent */
@@ -24,7 +24,7 @@ body {
 /* Header */
 .site-header {
   position: sticky; top: 0; z-index: 1000;
-  background: rgba(10, 15, 31, 0.7); backdrop-filter: blur(10px);
+  background: rgba(10, 15, 31, 0.85); backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
 .header-inner {
@@ -54,11 +54,10 @@ body {
   background-size: cover; background-position: center;
   transform: translateY(0);
   transition: transform .2s ease-out;
-  filter: saturate(1.1) contrast(1.05) brightness(.9);
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(10,15,31,0.6), rgba(10,15,31,0.85));
+  background: linear-gradient(180deg, rgba(10,15,31,0.8), rgba(10,15,31,0.95));
 }
 .hero-inner { position: relative; text-align: center; }
 .hero h1 { font-size: clamp(28px, 5vw, 48px); margin: 0; color: var(--gold); }
@@ -145,4 +144,7 @@ body {
   .nav.open .nav-list {
     display: flex; flex-direction: column; gap: 12px; background: rgba(13,20,38,0.95);
     padding: 12px; border-radius: 12px; position: absolute; right: 12px; top: 52px;
-    border: 1px solid var(--
+    border: 1px solid var(--border);
+  }
+}
+@media (max-width: 560px)
