@@ -27,11 +27,12 @@ if (form) {
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
-    const name = data.get('name')?.toString().trim();
-    const email = data.get('email')?.toString().trim();
-    const message = data.get('message')?.toString().trim();
+    const name = data.get('name')?.trim();
+    const email = data.get('email')?.trim();
+    const service = data.get('service')?.trim();
+    const message = data.get('message')?.trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !service || !message) {
       statusEl.textContent = 'Please fill in all fields.';
       return;
     }
