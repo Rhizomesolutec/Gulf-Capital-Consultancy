@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProConnect Solutions — Web & Digital Growth</title>
+  <meta name="description" content="Web development, branding, SEO, and digital marketing to grow your business with clarity and performance." />
+  <meta property="og:title" content="ProConnect Solutions" />
+  <meta property="og:description" content="Web development, branding, SEO, and digital marketing." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <img src="assets/logo.svg" alt="ProConnect Solutions" class="logo" />
+        <span>ProConnect Solutions</span>
+      </a>
+      <nav class="nav" id="nav">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary header-cta" href="https://wa.me/971562919479" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1 class="animate fade-up">Your Digital Growth Partner</h1>
+        <p class="lead animate fade-up delay-1">
+          We blend strategy, design, and engineering to build fast, elegant websites that convert.
+        </p>
+        <div class="cta-group animate fade-up delay-2">
+          <a href="#services" class="btn btn-primary">Explore Services</a>
+          <a href="https://wa.me/971562919479" target="_blank" rel="noopener" class="btn btn-outline">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div class="animate slide-in-left">
+          <h2>About us</h2>
+          <p>
+            ProConnect Solutions helps businesses build a credible online presence—combining branding clarity with technical excellence.
+            From concept to launch, we deliver websites that are fast, secure, and easy to manage.
+          </p>
+          <ul class="ticks">
+            <li>Strategy-first approach</li>
+            <li>Performance & SEO focused</li>
+            <li>Clean, scalable code</li>
+          </ul>
+        </div>
+        <div class="card highlight animate slide-in-right">
+          <h3>What sets us apart</h3>
+          <p>
+            We care about outcomes—clear messaging, thoughtful design, and measurable growth. Every detail is intentional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <div class="container">
+        <h2 class="center">Services</h2>
+        <p class="center sub">Core offerings typically provided by modern web & digital firms.</p>
+        <div class="services-grid">
+          <article class="service-card animate fade-up">
+            <h3>Website design & development</h3>
+            <p>Responsive, fast, and accessible sites—built with clean HTML/CSS/JS and best practices.</p>
+          </article>
+          <article class="service-card animate fade-up delay-1">
+            <h3>Branding & visual identity</h3>
+            <p>Logos, color systems, typography, and brand guidelines that feel cohesive and credible.</p>
+          </article>
+          <article class="service-card animate fade-up delay-2">
+            <h3>SEO & content strategy</h3>
+            <p>Technical SEO, on-page optimization, and content frameworks that drive organic growth.</p>
+          </article>
+          <article class="service-card animate fade-up delay-3">
+            <h3>Digital marketing</h3>
+            <p>Campaign planning, social media management, and performance reporting.</p>
+          </article>
+          <article class="service-card animate fade-up delay-4">
+            <h3>E-commerce setup</h3>
+            <p>Storefront configuration, product architecture, payments, and conversion optimization.</p>
+          </article>
+          <article class="service-card animate fade-up delay-5">
+            <h3>Maintenance & support</h3>
+            <p>Security updates, backups, uptime monitoring, and iterative improvements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container grid-2">
+        <div class="animate slide-in-left">
+          <h2>Contact us</h2>
+          <p>Tell us about your project. We’ll respond within one business day.</p>
+          <div class="contact-meta">
+            <p><strong>Email:</strong> hello@proconnect.example</p>
+            <p><strong>WhatsApp:</strong> +971 562919479</p>
+          </div>
+        </div>
+        <form id="contactForm" class="card form-card animate slide-in-right" novalidate>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/971562919479" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 ProConnect Solutions. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
