@@ -16,8 +16,17 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.15 }
 );
-
 document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+// Parallax hero
+const hero = document.querySelector('[data-parallax]');
+const heroBg = document.querySelector('.hero-bg');
+if (hero && heroBg) {
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY * 0.25;
+    heroBg.style.transform = `translateY(${y}px) scale(1.02)`;
+  });
+}
 
 // Contact form handling
 const form = document.getElementById('contactForm');
