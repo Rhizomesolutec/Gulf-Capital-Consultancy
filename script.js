@@ -1,0 +1,43 @@
+// Mobile nav toggle
+const nav = document.getElementById('nav');
+const navToggle = document.getElementById('navToggle');
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+}
+
+// Intersection Observer for animations
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('in');
+    });
+  },
+  { threshold: 0.15 }
+);
+
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+// Contact form handling
+const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('formStatus');
+
+if (form) {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = data.get('name')?.toString().trim();
+    const email = data.get('email')?.toString().trim();
+    const message = data.get('message')?.toString().trim();
+
+    if (!name || !email || !message) {
+      statusEl.textContent = 'Please fill in all fields.';
+      return;
+    }
+
+    // Demo-only: show success message
+    statusEl.textContent = 'Thanks! We’ll get back to you within one business day.';
+    form.reset();
+  });
+}
