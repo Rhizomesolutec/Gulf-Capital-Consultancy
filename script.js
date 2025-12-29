@@ -11,17 +11,19 @@ if (navToggle) {
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('in');
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+      }
     });
   },
   { threshold: 0.15 }
 );
+
 document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 
-// Parallax hero
-const hero = document.querySelector('[data-parallax]');
+// Parallax hero background
 const heroBg = document.querySelector('.hero-bg');
-if (hero && heroBg) {
+if (heroBg) {
   window.addEventListener('scroll', () => {
     const y = window.scrollY * 0.25;
     heroBg.style.transform = `translateY(${y}px) scale(1.02)`;
@@ -42,12 +44,14 @@ if (form) {
     const message = data.get('message')?.trim();
 
     if (!name || !email || !service || !message) {
-      statusEl.textContent = 'Please fill in all fields.';
+      statusEl.textContent = '⚠️ Please fill in all fields.';
+      statusEl.style.color = '#f5c542'; // gold accent for warning
       return;
     }
 
     // Demo-only: show success message
-    statusEl.textContent = 'Thanks! We’ll get back to you within one business day.';
+    statusEl.textContent = '✅ Thanks! We’ll get back to you within one business day.';
+    statusEl.style.color = '#25d366'; // WhatsApp green for success
     form.reset();
   });
 }
