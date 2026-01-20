@@ -41,7 +41,7 @@ body {
 .btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 28px rgba(47,125,244,0.35); }
 .btn-outline { border: 1px solid var(--border); color: var(--text); }
 
-/* Hero background uses hero.jpeg */
+/* Hero background uses hero.webp */
 .hero {
   position: relative;
   padding: 120px 0 90px;
@@ -49,7 +49,7 @@ body {
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('hero.jpeg');
+  background-image: url('hero.webp');
   background-size: cover; background-position: center;
   transform: translateY(0);
   transition: transform .2s ease-out;
