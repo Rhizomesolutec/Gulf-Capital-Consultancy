@@ -10,6 +10,7 @@
   --border: rgba(255,255,255,0.12);
 }
 
+/* Base */
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
@@ -17,7 +18,6 @@ body {
   color: var(--text);
   line-height: 1.6;
 }
-
 .container { width: 92%; max-width: 1200px; margin: 0 auto; }
 
 /* Header */
@@ -134,7 +134,6 @@ body {
 .delay-1 { transition-delay: .1s; }
 .delay-2 { transition-delay: .2s; }
 .delay-3 { transition-delay: .3s; }
-
 /* ===== Modal Styling ===== */
 .modal {
   display: none;
@@ -170,19 +169,18 @@ body {
   color: var(--primary);
 }
 
+/* Modal list */
 .modal-content ul.list {
   list-style: none;
   padding: 0;
   margin: 16px 0;
 }
-
 .modal-content ul.list li {
   margin: 8px 0;
   padding-left: 20px;
   position: relative;
   color: var(--muted);
 }
-
 .modal-content ul.list li::before {
   content: "•";
   position: absolute;
@@ -190,6 +188,7 @@ body {
   color: var(--primary);
 }
 
+/* Modal close */
 .modal-close {
   background: none;
   border: none;
@@ -200,11 +199,12 @@ body {
   float: right;
   transition: color .2s ease;
 }
-
 .modal-close:hover { color: var(--gold); }
 
+/* Inline CTA inside modal */
 .cta-inline { margin-top: 20px; }
 
+/* Prevent body scroll when modal open */
 .no-scroll { overflow: hidden; }
 
 /* Modal animation */
@@ -244,3 +244,10 @@ body {
   .modal-content { padding: 18px; }
   .footer-inner { flex-direction: column; gap: 12px; }
 }
+
+/* ===== Stability option (optional) ===== */
+/* Uncomment if you want all animated elements visible by default (no JS needed) */
+/*
+.animate { opacity: 1 !important; transform: none !important; }
+.fade-up.in, .slide-in-left.in, .slide-in-right.in { opacity: 1 !important; transform: none !important; }
+*/
